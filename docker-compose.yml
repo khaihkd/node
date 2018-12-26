@@ -14,7 +14,7 @@ services:
       NETSTATS_PORT: 443
       WS_SECRET_FILE: 'getty-site-pablo-auger-room-sos-blair-shin-whiz-delhi'
     ports:
-      - 30303:30303
-      - 30303:30303
+      - 30303:30303/tcp
+      - 30303:30303/udp
     volumes:
       - /mnt/chaindata:/tomochain/data
