@@ -19,3 +19,14 @@ services:
     volumes:
       - /mnt/chaindata:/tomochain/data
     restart: always
+
+  metrics:
+    image: tomochain/telegraf:stable
+    hostname: $ADDRESS
+    environment:
+      METRICS_ENDPOINT: https://metrics.tomochain.com
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/rootfs/sys:ro
+      - /proc:/rootfs/proc:ro
+      - /etc:/rootfs/etc:ro
