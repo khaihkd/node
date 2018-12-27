@@ -18,3 +18,4 @@ services:
       - 30303:30303/udp
     volumes:
       - /mnt/chaindata:/tomochain/data
+    restart: always
