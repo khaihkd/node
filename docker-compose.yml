@@ -16,6 +16,7 @@ services:
     ports:
       - 30303:30303/tcp
       - 30303:30303/udp
+      - 8545:8545
     volumes:
       - /mnt/chaindata:/tomochain/data
     restart: always
